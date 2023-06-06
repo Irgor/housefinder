@@ -5,4 +5,8 @@ mat-card {
     mat-card-title {
         padding: 12px;
     }
+
+    @media screen and (max-width: 600px) {
+        width: 320px;
+    }
 }
