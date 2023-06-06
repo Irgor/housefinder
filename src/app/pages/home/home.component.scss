@@ -11,7 +11,7 @@
         width: 100%;
         height: 400px;
         background-size: cover;
-        filter: blur(7px) grayscale(.4);
+        filter: blur(2px) grayscale(.4);
     }
 
     .content {
@@ -31,5 +31,10 @@
 
     .form-field-states {
         width: 60vw;
+    }
+
+    .small-filter {
+        margin: 12px;
+        margin-left: 0px;
     }
 }

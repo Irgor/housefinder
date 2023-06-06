@@ -1,4 +1,7 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
+
+import { StatesService } from 'src/app/services/states.service';
 
 @Component({
   selector: 'app-home',
@@ -6,9 +9,15 @@ import { Component, ViewEncapsulation } from '@angular/core';
   styleUrls: ['./home.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit, OnDestroy {
 
   state: string = 'SP';
+  type: string = 'all';
+  city: string = 'all';
+
+  cities: string[] = [];
+
+  subs!: Subscription;
 
   states = [
     { name: 'Acre', value: 'AC' },
@@ -40,8 +49,18 @@ export class HomeComponent {
     { name: 'Tocantins', value: 'TO' },
   ]
 
-  findStateList() {
+  constructor(public statesService: StatesService) {
 
+  }
+
+  ngOnInit() {
+    this.subs = this.statesService.citiesFilter.subscribe(cities => {
+      this.cities = cities;
+    });
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe();
   }
 
 }

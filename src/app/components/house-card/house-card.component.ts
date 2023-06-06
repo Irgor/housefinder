@@ -11,7 +11,7 @@ export class HouseCardComponent {
   @Input() data: House | undefined;
 
   getHouseTitle() {
-    const type = this.data?.descricao.includes('Apartamento') ? 'Apartamento' : 'Casa';
+    const type = this.data?.descricao.split(',')[0];
     return type + ' em ' + this.data?.cidade.toLocaleLowerCase();
   }
 
