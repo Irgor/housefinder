@@ -1,0 +1,28 @@
+<mat-card>
+
+    <mat-card-title>
+        {{ getHouseTitle() }}
+    </mat-card-title>
+
+    <mat-card-content>
+        {{ getHouseTitle()}}, &nbsp;{{ data?.bairro?.toLowerCase() }}
+
+        <br>
+
+        {{ data?.descricao }}
+
+        <br>
+        <br>
+
+        <strong>
+            R$ {{ data?.preco }}
+        </strong>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+        <button (click)="openHouse()" mat-icon-button aria-label="Example icon button with a open in new tab icon">
+            <mat-icon>open_in_new</mat-icon>
+        </button>
+    </mat-card-actions>
+
+</mat-card>
