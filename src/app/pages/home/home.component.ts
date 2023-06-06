@@ -17,6 +17,10 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   cities: string[] = [];
 
+  maxPrice!: number;
+
+  prices = Array(20).fill(0).map((x, i) => (i + 1) * 10000);
+
   subs!: Subscription;
 
   states = [

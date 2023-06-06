@@ -15,6 +15,11 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import { HouseCardComponent } from './components/house-card/house-card.component';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import { CurrencyMaskModule } from "ng2-currency-mask";
 
 @NgModule({
   declarations: [
@@ -31,7 +36,11 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatCardModule,
     FormsModule,
-    MatIconModule
+    MatIconModule,
+    MatSliderModule,
+    MatInputModule,
+    MatFormFieldModule,
+    CurrencyMaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]

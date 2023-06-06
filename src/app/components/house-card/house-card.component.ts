@@ -16,7 +16,7 @@ export class HouseCardComponent {
   }
 
   openHouse() {
-    window.open(this.data?.['link de acesso']);
+    window.open(this.data?.link);
   }
 
 }

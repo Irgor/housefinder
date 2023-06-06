@@ -1,0 +1,93 @@
+[
+ {
+   "id": 10141747,
+   "uf": "TO",
+   "cidade": "COLINAS DO TOCANTINS",
+   "bairro": "COLINAS DO TOCANTINS",
+   "endereco": "AVENIDA ERNESTO BALAS BARROS, N. 2007, QUADRA M-69, LOTE 04 - SANTA ROSA",
+   "preco": "95.066,70",
+   "valorAvaliacao": "131.000,00",
+   "desconto": 27.43,
+   "descricao": "Casa, 0.00 de área total, 97.27 de área privativa, 0.00 de área do terreno.",
+   "modalidade": "Venda Direta Online",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=10141747"
+ },
+ {
+   "id": 8444410569985,
+   "uf": "TO",
+   "cidade": "GURUPI",
+   "bairro": "CH RECR V AMANHECER",
+   "endereco": "RUA D, N. 235, CH 14-A",
+   "preco": "123.800,00",
+   "valorAvaliacao": "123.800,00",
+   "desconto": 0,
+   "descricao": "Casa, 70.18 de área total, 70.18 de área privativa, 223.75 de área do terreno,  2 qto(s), a.serv, WC, 1 sala(s), cozinha, 1 vaga(s) de garagem.",
+   "modalidade": "1º Leilão SFI",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=8444410569985"
+ },
+ {
+   "id": 10151607,
+   "uf": "TO",
+   "cidade": "MIRACEMA DO TOCANTINS",
+   "bairro": "SETOR SUSSUAPARA I",
+   "endereco": "RUA ELPIDIO MACIEL, QD 68, LT 03",
+   "preco": "358.000,00",
+   "valorAvaliacao": "324.000,00",
+   "desconto": 0,
+   "descricao": "Casa, 0.00 de área total, 266.71 de área privativa, 600.00 de área do terreno,  1 qto(s), a.serv, WC, 2 sala(s), cozinha, 1 vaga(s) de garagem.",
+   "modalidade": "1º Leilão SFI",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=10151607"
+ },
+ {
+   "id": 240037219,
+   "uf": "TO",
+   "cidade": "PALMAS",
+   "bairro": "PLANO DIRETOR SUL",
+   "endereco": "ARSE 82 ALAMEDA 10 A, Apto 104, 806 S CJ HM 05 BL 4 APM-25",
+   "preco": "112.000,00",
+   "valorAvaliacao": "112.000,00",
+   "desconto": 0,
+   "descricao": "Apartamento, 105.21 de área total, 45.89 de área privativa, 0.00 de área do terreno,  2 qto(s), WC, 1 sala(s), cozinha, 1 vaga(s) de garagem.",
+   "modalidade": "Venda Direta",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=240037219"
+ },
+ {
+   "id": 240037227,
+   "uf": "TO",
+   "cidade": "PALMAS",
+   "bairro": "PLANO DIRETOR SUL",
+   "endereco": "ARSE 82 ALAMEDA 10 A, Apto 203, 806 S CJ HM 05 BL 7 APM-25",
+   "preco": "115.000,00",
+   "valorAvaliacao": "115.000,00",
+   "desconto": 0,
+   "descricao": "Apartamento, 105.21 de área total, 45.89 de área privativa, 0.00 de área do terreno,  2 qto(s), WC, 1 sala(s), cozinha, 1 vaga(s) de garagem.",
+   "modalidade": "Venda Direta",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=240037227"
+ },
+ {
+   "id": 240043316,
+   "uf": "TO",
+   "cidade": "PALMAS",
+   "bairro": "PLANO DIRETOR SUL",
+   "endereco": "Q ARSE 33 ALAMEDA 10 B 04 L HM2.2, Apto 102, BLOCO 4 - LT HM 2.2",
+   "preco": "110.000,00",
+   "valorAvaliacao": "110.000,00",
+   "desconto": 0,
+   "descricao": "Apartamento, 52.04 de área total, 47.51 de área privativa, 0.00 de área do terreno,  2 qto(s), a.serv, WC, 1 sala(s), cozinha, 1 vaga(s) de garagem.",
+   "modalidade": "Venda Direta",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=240043316"
+ },
+ {
+   "id": 240043324,
+   "uf": "TO",
+   "cidade": "PALMAS",
+   "bairro": "PLANO DIRETOR SUL",
+   "endereco": "QUADRA ARSO 121 ALAMEDA 10, N. 0, Apto 301, BLOCO 2 LOTE HM 1-A CJ HM",
+   "preco": "109.000,00",
+   "valorAvaliacao": "109.000,00",
+   "desconto": 0,
+   "descricao": "Apartamento, 100.22 de área total, 45.84 de área privativa, 0.00 de área do terreno,  2 qto(s), a.serv, WC, 1 sala(s), cozinha, 1 vaga(s) de garagem.",
+   "modalidade": "Venda Direta",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=240043324"
+ }
+]

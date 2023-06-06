@@ -29,7 +29,13 @@
           <mat-option value="all">Todos</mat-option>
           <mat-option value="Apartamento">Apartamento</mat-option>
           <mat-option value="Casa">Casa</mat-option>
+          <mat-option value="Comercial">Comercial</mat-option>
+          <mat-option value="Galpão">Galpão</mat-option>
           <mat-option value="Gleba">Gleba</mat-option>
+          <mat-option value="Loja">Loja</mat-option>
+          <mat-option value="Prédio">Prédio</mat-option>
+          <mat-option value="Sala">Sala</mat-option>
+          <mat-option value="Sobrado">Sobrado</mat-option>
           <mat-option value="Terreno">Terreno</mat-option>
         </mat-select>
       </mat-form-field>
@@ -44,9 +50,20 @@
         </mat-select>
       </mat-form-field>
 
+      <mat-form-field class="small-filter">
+        <mat-label>
+          Preço até:
+        </mat-label>
+        <mat-select [(ngModel)]="maxPrice">
+          <mat-option value="0">Todos</mat-option>
+          <mat-option *ngFor="let price of prices" [value]="price">{{ (price) | currency : 'BRL'}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+
     </mat-card-content>
 
   </mat-card>
 </div>
 
-<app-list [state]="state" [type]="type" [city]="city"></app-list>
+<app-list [state]="state" [type]="type" [city]="city" [maxPrice]="maxPrice"></app-list>

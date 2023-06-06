@@ -1,0 +1,28 @@
+[
+ {
+   "id": 10005782,
+   "uf": "AP ",
+   "cidade": "MACAPA ",
+   "bairro": "UNIVERSIDADE ",
+   "endereco": "RUA QUATRO, N. S/N, QD 5 LT 47 (RUA 01) ",
+   "preco": "34.562,20",
+   "valorAvaliacao": "59.000,00",
+   "desconto": 41.42,
+   "descricao": "Terreno, 0.00 de área total, 0.00 de área privativa, 250.92 de área do terreno.",
+   "modalidade": "Venda Direta Online",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=10005782"
+ },
+ {
+   "id": 10005787,
+   "uf": "AP ",
+   "cidade": "MACAPA ",
+   "bairro": "UNIVERSIDADE ",
+   "endereco": "RUA 4, N. S/N, QD 05, LT 48 ",
+   "preco": "33.976,40",
+   "valorAvaliacao": "58.000,00",
+   "desconto": 41.42,
+   "descricao": "Terreno, 0.00 de área total, 0.00 de área privativa, 200.00 de área do terreno.",
+   "modalidade": "Venda Online",
+   "link": "https://venda-imoveis.caixa.gov.br/sistema/detalhe-imovel.asp?hdnOrigem=index&hdnimovel=10005787"
+ }
+]
