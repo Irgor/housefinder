@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges, Type } from '@angul
 import { House } from 'src/app/models/house';
 import { StatesService } from 'src/app/services/states.service';
 
+import AC from '../../../assets/lists/imoveis_AC.json';
 import AL from '../../../assets/lists/imoveis_AL.json';
 import AM from '../../../assets/lists/imoveis_AM.json';
 import AP from '../../../assets/lists/imoveis_AP.json';
@@ -41,6 +42,7 @@ export class ListComponent implements OnChanges, OnInit {
   @Input() maxPrice!: number;
 
   listNames: any = {
+    'AC': AC as unknown as House[], 
     'AL': AL as unknown as House[], 
     'AM': AM as unknown as House[], 
     'AP': AP as unknown as House[], 
