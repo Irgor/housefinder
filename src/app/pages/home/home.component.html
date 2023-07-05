@@ -3,6 +3,13 @@
 
   <mat-card class="content">
 
+    <div class="favorites">
+      <button mat-mini-fab [color]="!isFavs ? 'warn' : 'primary'" (click)="goToFavs()">
+        <mat-icon *ngIf="!isFavs">favorite</mat-icon>
+        <mat-icon *ngIf="isFavs">arrow_back</mat-icon>
+      </button>
+    </div>
+
     <mat-card-header>
 
       <mat-card-title>
@@ -66,4 +73,4 @@
   </mat-card>
 </div>
 
-<app-list [state]="state" [type]="type" [city]="city" [maxPrice]="maxPrice"></app-list>
+<app-list [state]="state" [type]="type" [city]="city" [maxPrice]="maxPrice" [isFavs]="isFavs"></app-list>

@@ -11,6 +11,8 @@ import { StatesService } from 'src/app/services/states.service';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
+  isFavs = false;
+
   state: string = 'SP';
   type: string = 'all';
   city: string = 'all';
@@ -66,5 +68,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subs.unsubscribe();
   }
-
+  
+  goToFavs() {
+    this.isFavs = !this.isFavs;
+  }
 }

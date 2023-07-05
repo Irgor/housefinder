@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges, Type } from '@angular/core';
 import { House } from 'src/app/models/house';
 import { StatesService } from 'src/app/services/states.service';
+import { Subscription } from 'rxjs';
 
 import AC from '../../../assets/lists/imoveis_AC.json';
 import AL from '../../../assets/lists/imoveis_AL.json';
@@ -29,6 +30,7 @@ import SC from '../../../assets/lists/imoveis_SC.json';
 import SE from '../../../assets/lists/imoveis_SE.json';
 import SP from '../../../assets/lists/imoveis_SP.json';
 import TO from '../../../assets/lists/imoveis_TO.json';
+import { FavoritesService } from 'src/app/services/favorites.service';
 
 @Component({
   selector: 'app-list',
@@ -40,47 +42,65 @@ export class ListComponent implements OnChanges, OnInit {
   @Input() type: string = '';
   @Input() city: string = '';
   @Input() maxPrice!: number;
+  @Input() isFavs: boolean = false;
 
   listNames: any = {
-    'AC': AC as unknown as House[], 
-    'AL': AL as unknown as House[], 
-    'AM': AM as unknown as House[], 
-    'AP': AP as unknown as House[], 
-    'BA': BA as unknown as House[], 
-    'CE': CE as unknown as House[], 
-    'DF': DF as unknown as House[], 
-    'ES': ES as unknown as House[], 
-    'GO': GO as unknown as House[], 
-    'MA': MA as unknown as House[], 
-    'MG': MG as unknown as House[], 
-    'MS': MS as unknown as House[], 
-    'MT': MT as unknown as House[], 
-    'PA': PA as unknown as House[], 
-    'PB': PB as unknown as House[], 
-    'PE': PE as unknown as House[], 
-    'PI': PI as unknown as House[], 
-    'PR': PR as unknown as House[], 
-    'RJ': RJ as unknown as House[], 
-    'RN': RN as unknown as House[], 
-    'RO': RO as unknown as House[], 
-    'RR': RR as unknown as House[], 
-    'RS': RS as unknown as House[], 
-    'SC': SC as unknown as House[], 
-    'SE': SE as unknown as House[], 
-    'SP': SP as unknown as House[], 
-    'TO': TO as unknown as House[], 
+    'AC': AC as unknown as House[],
+    'AL': AL as unknown as House[],
+    'AM': AM as unknown as House[],
+    'AP': AP as unknown as House[],
+    'BA': BA as unknown as House[],
+    'CE': CE as unknown as House[],
+    'DF': DF as unknown as House[],
+    'ES': ES as unknown as House[],
+    'GO': GO as unknown as House[],
+    'MA': MA as unknown as House[],
+    'MG': MG as unknown as House[],
+    'MS': MS as unknown as House[],
+    'MT': MT as unknown as House[],
+    'PA': PA as unknown as House[],
+    'PB': PB as unknown as House[],
+    'PE': PE as unknown as House[],
+    'PI': PI as unknown as House[],
+    'PR': PR as unknown as House[],
+    'RJ': RJ as unknown as House[],
+    'RN': RN as unknown as House[],
+    'RO': RO as unknown as House[],
+    'RR': RR as unknown as House[],
+    'RS': RS as unknown as House[],
+    'SC': SC as unknown as House[],
+    'SE': SE as unknown as House[],
+    'SP': SP as unknown as House[],
+    'TO': TO as unknown as House[],
   }
 
   listToShow: House[] = SP as unknown as House[];
 
   cities: string[] = [];
 
-  constructor(public statesService: StatesService) {
+  favs: any[] = [];
+  sub!: Subscription;
+
+
+  constructor(public statesService: StatesService, public favsList: FavoritesService) {
 
   }
 
   ngOnInit() {
+    this.listenToFavs();
     this.findCities();
+  }
+
+  
+  ngOnDestroy(): void {
+    this.sub.unsubscribe();
+  }
+
+  listenToFavs() {
+    this.sub = this.favsList.favoriteList.subscribe(favs => {
+      this.favs = favs;
+      this.ngOnChanges();
+    })
   }
 
   findCities() {
@@ -91,7 +111,7 @@ export class ListComponent implements OnChanges, OnInit {
     this.statesService.citiesFilter.next(this.cities)
   }
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(changes?: SimpleChanges): void {
     this.listToShow = this.listNames[this.state];
 
     if (this.type != 'all') {
@@ -102,8 +122,12 @@ export class ListComponent implements OnChanges, OnInit {
       this.listToShow = this.listToShow.filter(row => row.cidade == this.city);
     }
 
-    if(this.maxPrice && this.maxPrice > 0) {
-      this.listToShow = this.listToShow.filter(row => +row.preco.split(',')[0].replace(/\./g,'') <= this.maxPrice);
+    if (this.maxPrice && this.maxPrice > 0) {
+      this.listToShow = this.listToShow.filter(row => +row.preco.split(',')[0].replace(/\./g, '') <= this.maxPrice);
+    }
+
+    if (this.isFavs) {
+      this.listToShow = this.listToShow.filter(row => this.favs.includes(row.id));
     }
 
     this.findCities();

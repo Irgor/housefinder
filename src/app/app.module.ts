@@ -26,7 +26,7 @@ import { CurrencyMaskModule } from "ng2-currency-mask";
     AppComponent,
     HomeComponent,
     ListComponent,
-    HouseCardComponent
+    HouseCardComponent,
   ],
   imports: [
     BrowserModule,
