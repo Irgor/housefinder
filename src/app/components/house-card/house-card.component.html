@@ -5,17 +5,18 @@
     </mat-card-title>
 
     <mat-card-content>
-        {{ getHouseTitle()}}, &nbsp;{{ data?.bairro?.toLowerCase() }}
-
+        🏠 {{ getHouseTitle()}}, &nbsp;{{ data?.bairro?.toLowerCase() }}
         <br>
-
         {{ data?.descricao }}
-
         <br>
         <br>
-
+        <span>
+            📍 Endereço: {{ data?.endereco}}
+        </span>
+        <br>
+        <br>
         <strong>
-            R$ {{ data?.preco }}
+            💰 R$ {{ data?.preco }}
         </strong>
     </mat-card-content>
 
@@ -23,7 +24,7 @@
         <button mat-mini-fab (click)="openHouse()" color="basic">
             <mat-icon>open_in_new</mat-icon>
         </button>
-        <button mat-mini-fab (click)="favorite()" [color]="isFav ? 'warn' : 'baisc'" style="margin-left: 10px;">
+        <button mat-mini-fab (click)="favorite()" [color]="isFav ? 'warn' : 'basic'" style="margin-left: 10px;">
             <mat-icon [color]="isFav ? 'baisc' : 'warn'">favorite</mat-icon>
         </button>
     </mat-card-actions>

@@ -1,9 +1,38 @@
 mat-card {
     width: 500px;
+    min-height: 300px;
+    padding: 12px;
     margin: 20px 0px;
+    transition: 1s all;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    justify-content: space-evenly;
+    flex-direction: column;
+    display: flex;
+
+    &:hover{
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        cursor: pointer;
+    }
 
     mat-card-title {
         padding: 12px;
+    }
+
+    mat-card-content {
+        span {
+            font-weight: bold;
+            text-overflow: ellipsis;
+        }
+        strong {
+            color: green;
+            font-size: 18px;
+        }
+    }
+
+    mat-card-actions {
+        button {
+            box-shadow: unset;
+        }
     }
 
     @media screen and (max-width: 600px) {
